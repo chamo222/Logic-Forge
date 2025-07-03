@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LogicForge Activation Email</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    /* Base Reset */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+      font-family: 'Arial', sans-serif;
+      font-size: 16px;
+      color: #333333;
+    }
+
+    .email-wrapper {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .email-header {
+      background: linear-gradient(135deg, #5f0a87, #a4508b);
+      color: #ffffff;
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    .email-header h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .email-body {
+      padding: 24px;
+    }
+
+    .email-body p {
+      margin: 0 0 20px;
+      line-height: 1.6;
+    }
+
+    .activation-code {
+      font-size: 24px;
+      font-weight: bold;
+      color: #5f0a87;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .email-footer {
+      background-color: #f9fafb;
+      padding: 20px 24px;
+      font-size: 14px;
+      text-align: center;
+      color: #6b7280;
+    }
+
+    a {
+      color: #5f0a87;
+      text-decoration: none;
+    }
+
+    @media only screen and (max-width: 620px) {
+      .email-body, .email-header, .email-footer {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="email-wrapper">
+    <div class="email-header">
+      <h1>Welcome to LogicForge</h1>
+    </div>
+    <div class="email-body">
+      <p>Hello <%= name %>,</p>
+      <p>
+        Thank you for registering with <strong>LogicForge</strong>! To activate your account, please use the code below:
+      </p>
+      <div class="activation-code"><%= otp %></div>
+      <p>
+        This code will expire in <strong>5 minutes</strong>. Please enter it on the activation page promptly.
+      </p>
+      <p>
+        If you didn’t request this, you can safely ignore this email.
+      </p>
+    </div>
+    <div class="email-footer">
+      <p>Need help? Email us at <a href="mailto:l.f.logicforge@gmail.com">l.f.logicforge@gmail.com</a></p>
+    </div>
+  </div>
+</body>
+</html>
